@@ -9,7 +9,6 @@ export function btnShowMore() {
     const content = btn.previousElementSibling
     content.classList.toggle('drop-down-grid--open')
     const fullHeight = content.scrollHeight
-    //
 
     if (content.classList.contains('drop-down-grid--open')) {
       content.style.maxHeight = fullHeight + 'px'
