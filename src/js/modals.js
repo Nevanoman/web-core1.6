@@ -1,5 +1,4 @@
 export function modals() {
-
   const btnOpenAside = document.querySelector('.button--type--burger')
   const btnsOpenFeedback = document.querySelectorAll('.button--type--feedback')
   const btnsOpenCall = document.querySelectorAll('.button--type--call')
@@ -12,7 +11,6 @@ export function modals() {
   const allModals = document.getElementsByClassName('modal')
 
   const modalBackground = document.querySelector('.modal-background')
-
 
   btnOpenAside.addEventListener('click', openAside)
 
