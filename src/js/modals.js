@@ -32,7 +32,6 @@ export function modals() {
 
   modalBackground.addEventListener('click', onClickBackground)
 
-  /// functions ///
   function openAside() {
     closeAllModals()
     openBackground()
