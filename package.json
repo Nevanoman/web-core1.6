@@ -1,25 +1,8 @@
 {
-  "name": "web-last-block",
+  "name": "web-core",
   "version": "1.0.0",
   "description": "",
-  "keywords": [
-    "web",
-    "scss",
-    "html",
-    "javascript",
-    "webpack"
-  ],
-  "license": "ISC",
-  "author": "Kata Academy",
-  "main": "index.js",
-  "scripts": {
-    "build": "webpack --mode production",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "dev": "webpack --mode development",
-    "start": "webpack-dev-server --mode development --open",
-    "watch": "webpack --mode development --watch"
-  },
+  "author": "Knyazev Vitaly",
   "browserslist": [
     "last 2 versions",
     "Firefox ESR",
@@ -27,31 +10,39 @@
     "not dead"
   ],
   "devDependencies": {
-    "@babel/core": "7.5.5",
-    "@babel/preset-env": "7.5.5",
-    "autoprefixer": "9.6.1",
-    "babel-loader": "8.0.6",
-    "copy-webpack-plugin": "5.1.0",
-    "css-loader": "3.2.0",
-    "file-loader": "4.2.0",
-    "gh-pages": "2.1.1",
-    "html-webpack-plugin": "3.2.0",
-    "mini-css-extract-plugin": "0.8.0",
-    "node-sass": "^4.14.1",
-    "postcss-loader": "3.0.0",
-    "sass-loader": "7.2.0",
-    "webpack": "4.41.2",
-    "webpack-cli": "3.3.7",
-    "webpack-dev-server": "^3.11.0"
+    "@babel/core": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "autoprefixer": "^10.4.13",
+    "babel-loader": "^9.1.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.3",
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "gh-pages": "^5.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.7.2",
+    "postcss": "^8.4.21",
+    "postcss-loader": "^7.0.2",
+    "prettier": "2.8.4",
+    "ref-loader": "^1.0.3",
+    "sass": "^1.58.0",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
   },
-  "engineStrict": true,
-  "engines": {
-    "node": "~14.18.3",
-    "npm": "~6.14.15"
+  "scripts": {
+    "deploy": "gh-pages -d dist",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "watch": "cross-env NODE_ENV=development webpack --mode development --watch",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development"
   },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "swiper": "^9.0.5"
   }
 }
